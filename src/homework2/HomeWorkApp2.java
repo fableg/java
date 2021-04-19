@@ -2,17 +2,13 @@ package homework2;
 
 public class HomeWorkApp2 {
     public static void main(String[] args) {
-    summ(5,10);
-    within10and20(10, 7);
-    isNegativeOrPositive(5);
-    isNegative(1);
-    printWordNTimes("Slovo",100);
+    within10and20();
+    isNegativeOrPositive();
+    isNegative();
+    printWordNTimes();
+    checkLeapYear();
     }
-
-    public static int summ (int a, int b){
-        return a + b;
-    }
-// Написать метод, принимающий на вход два целых числа и проверяющий,
+    // Написать метод, принимающий на вход два целых числа и проверяющий,
 // что их сумма лежит в пределах от 10 до 20 (включительно),
 // если да – вернуть true, в противном случае – false.
 
@@ -40,11 +36,7 @@ public class HomeWorkApp2 {
 //Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
 
     public static boolean isNegative(int a){
-        if (a <= 0){
-            return true;
-        } else {
-            return false;
-        }
+       return a < 0;
     }
 
 //Написать метод, которому в качестве аргументов передается строка и число,
@@ -55,6 +47,9 @@ public class HomeWorkApp2 {
             System.out.println(word);
         }
     }
-
+// задание со *
+    public static boolean checkLeapYear(int year){
+            return (year % 4 == 0 && year % 100 !=0) || year % 400 == 0;
+    }
 }
 
