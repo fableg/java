@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TicTacToe {
 
     private static final int SIZE = 3;
-
+    private static final int DOTS_TO_WIN = 3;
     private static final char DOT_EMPTY = '•';
     private static final char DOT_X = 'X';
     private static final char DOT_O = 'O';
@@ -57,17 +57,38 @@ public class TicTacToe {
 
     // дз
     private static boolean isWin(char symbol) {
-        if (map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) return true;
-        if (map[1][0] == symbol && map[1][1] == symbol && map[1][2] == symbol) return true;
-        if (map[2][0] == symbol && map[2][1] == symbol && map[2][2] == symbol) return true;
+        if (chekRowAndCols(symbol)) {
+            return true;
+        } else {
+            return chekDiagonals(symbol);
+        }
+    }
 
-        if (map[0][0] == symbol && map[1][0] == symbol && map[2][0] == symbol) return true;
-        if (map[0][1] == symbol && map[1][1] == symbol && map[2][1] == symbol) return true;
-        if (map[0][2] == symbol && map[1][2] == symbol && map[2][2] == symbol) return true;
+    private static boolean chekDiagonals(char symbol){
+        int mainDiagCounter = 0;
+        int sideDiagCounter = 0;
+        for (int i = 0; i < SIZE; i++) {
+            mainDiagCounter = (map[i][i] == symbol) ? mainDiagCounter + 1 : 0;
+            sideDiagCounter = (map[i][map.length - 1 - i] == symbol) ? sideDiagCounter + 1 : 0;
+            if (mainDiagCounter == DOTS_TO_WIN || sideDiagCounter == DOTS_TO_WIN) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-        if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
-        if (map[0][2] == symbol && map[1][1] == symbol && map[2][0] == symbol) return true;
-
+    private static boolean chekRowAndCols(char symbol) {
+        for (int i = 0; i < SIZE; i++) {
+            int rowCounter = 0;
+            int colCounter = 0;
+            for (int j = 0; j < SIZE; j++) {
+                rowCounter = (map[i][j] == symbol) ? rowCounter + 1 : 0;
+                colCounter = (map [j][i] == symbol) ? colCounter + 1 : 0;
+                if (rowCounter == DOTS_TO_WIN || colCounter == DOTS_TO_WIN) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
@@ -140,10 +161,6 @@ public class TicTacToe {
     private static void initMap() {
         for (int i = 0; i < SIZE; i++) {
             Arrays.fill(map[i], DOT_EMPTY);
-//            for (int j = 0; j < SIZE; j++) {
-//                mai[i][j] = DOT_EMPTY;
-//            }
-
         }
     }
 }
