@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cce70f1-ea43-4cb9-9c00-58ae19c4d5b1" name="Default Changelist" comment="homework5 complete">
-      <change afterPath="$PROJECT_DIR$/src/homework6/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/homework6/Cat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/homework4/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/homework4/TicTacToe.java" afterDir="false" />
     </list>
@@ -80,7 +78,7 @@
       <recent name="homework5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Test (1)">
     <configuration type="ComposePreviewRunConfiguration">
       <module name="lesson1" />
       <option name="DEPLOY" value="true" />
@@ -116,14 +114,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Lesson7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="homework5.EmployeeTest" />
+      <option name="MAIN_CLASS_NAME" value="lesson7.Lesson7" />
       <module name="IdeaProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework5.*" />
+          <option name="PATTERN" value="homework7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,6 +161,21 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="homework6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="homework7.Test" />
+      <module name="IdeaProjects" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -212,18 +225,19 @@
     <list>
       <item itemvalue="Application.Task1" />
       <item itemvalue="Application.TicTacToe" />
-      <item itemvalue="Application.EmployeeTest" />
+      <item itemvalue="Application.Lesson7" />
       <item itemvalue="Application.Task4" />
+      <item itemvalue="Application.Test (1)" />
       <item itemvalue="Application.TestCat" />
       <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.Lesson7" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.TestCat" />
         <item itemvalue="Application.Task4" />
-        <item itemvalue="Application.EmployeeTest" />
-        <item itemvalue="Application.Task1" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619774730209</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="homework5 complete">
+      <created>1620307385993</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620307385993</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
