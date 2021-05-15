@@ -2,17 +2,15 @@ package homework8;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 
 public class Counter extends JFrame {
         private int value;
+        private int step;
 
         public Counter(int initialValue) {
-            setBounds(500, 500, 300, 120);
-            setTitle("Simple counter");
+            setBounds(500, 500, 450, 220);
+            setTitle("counter");
             setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             setAlwaysOnTop(true);
 
@@ -23,7 +21,18 @@ public class Counter extends JFrame {
             counterValueView.setHorizontalAlignment(SwingConstants.CENTER);
             add(counterValueView, BorderLayout.CENTER);
 
+            JTextField textField = new JTextField();
+            textField.setToolTipText("Задайте размер шага");
+            add(textField, BorderLayout.NORTH);
+            textField.addActionListener(e -> {
+                System.out.println(textField.getText());
+                 step = Integer.parseInt(textField.getText());
+
+            });
+
+
             value = initialValue;
+
 //            counterValueView.setText(String.valueOf(value));
 
             JButton decrementButton = new JButton("<");
@@ -34,21 +43,27 @@ public class Counter extends JFrame {
             add(incrementButton, BorderLayout.LINE_END);
             incrementButton.setFont(font);
 
-            decrementButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    value--;
-                    refreshCounterLabel(counterValueView);
-                }
+            JButton dischargeButton = new JButton("discharge");
+            add(dischargeButton,BorderLayout.SOUTH);
+            dischargeButton.setFont(font);
+
+            decrementButton.addActionListener(e -> {
+                value = value - step;
+                refreshCounterLabel(counterValueView);
             });
 
-            incrementButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    value++;
-                    refreshCounterLabel(counterValueView);
-                }
+            incrementButton.addActionListener(e -> {
+                value = value + step;
+                refreshCounterLabel(counterValueView);
             });
+
+
+            dischargeButton.addActionListener(e -> {
+                value = initialValue;
+                textField.setText("");
+                refreshCounterLabel(counterValueView);
+            });
+
             setVisible(true);
         }
 
