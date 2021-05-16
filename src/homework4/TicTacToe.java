@@ -14,7 +14,6 @@ public class TicTacToe {
 
     private static final char[][] map = new char[SIZE][SIZE];
 
-
     public static void main(String[] args) {
         initMap();
         printMap();
